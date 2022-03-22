@@ -1,0 +1,27 @@
+{
+    "name": "deminy/couchbase3-issues",
+    "description": "To report/reproduce issues found in the Couchbase 3 extension of PHP.",
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "~8.0",
+        "ext-couchbase": "~3.2.2"
+    },
+    "require-dev": {
+        "couchbase/couchbase3": "3.2.2"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "couchbase/couchbase3",
+                "version": "3.2.2",
+                "dist": {
+                    "url": "https://github.com/couchbase/php-couchbase/archive/v3.2.2.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "prefer-stable": true
+}

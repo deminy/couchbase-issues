@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    image: deminy/php-couchbase:3.2.2
+    links:
+      - couchbase
+    command: tail -f /dev/null
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+  couchbase:
+    image: deminy/couchbase:6.6.0
+    environment:
+      CB_ADMIN: username
+      CB_ADMIN_PASSWORD: password
+      CB_BUCKET: test
+    ports:
+      - 8091
+    volumes:
+      - couchbase:/opt/couchbase/var/lib/couchbase/data
+
+volumes:
+  couchbase:
