@@ -9,10 +9,12 @@ Run command `docker-compose up -d` to start the Docker containers. There are two
 
 # Issues
 
-## Issue #1: Method Getandlock() Doesn't Work As Expected
+## Issue #1 (Addressed): Method Getandlock() Doesn't Work As Expected
 
 Code to reproduce the issue can be found in file _./issue-1.php_. To reproduce it, please run the following command:
 
 ```bash
 docker-compose exec -T app php ./issue-1.php
  ```
+
+The Couchbase team is aware of this. They have an issue ticket [PCBC-840](https://issues.couchbase.com/browse/PCBC-840) created and will update the documentation accordingly.
