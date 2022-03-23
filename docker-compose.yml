@@ -1,8 +1,16 @@
 version: '3.8'
 
 services:
-  app:
-    image: deminy/php-couchbase:3.2.2
+  php7:
+    image: deminy/php-couchbase:php7.4-3.2.2
+    links:
+      - couchbase
+    command: tail -f /dev/null
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+  php8:
+    image: deminy/php-couchbase:php8.0-3.2.2
     links:
       - couchbase
     command: tail -f /dev/null

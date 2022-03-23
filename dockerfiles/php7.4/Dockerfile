@@ -1,6 +1,6 @@
 # To build the image:
-#     docker build -t deminy/php-couchbase:php8.0-3.2.2 .
-FROM php:8.0-cli
+#     docker build -t deminy/php-couchbase:php7.4-3.2.2 .
+FROM php:7.4-cli
 
 RUN \
     set -ex && \

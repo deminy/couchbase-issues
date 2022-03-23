@@ -10,7 +10,7 @@ $options->credentials('username', 'password');
 $cluster = new Cluster('couchbase://couchbase', $options);
 $collection = $cluster->bucket('test')->defaultCollection();
 
-$key = uniqid();
+$key = uniqid('key');
 $lockTime = 5000; // To lock the item for 5 seconds.
 
 $collection->removeMulti([$key]); // First, remove the item if exists.
