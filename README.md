@@ -29,3 +29,5 @@ expected, however, test script _./issue-2-b.php_ doesn't throw out an exception 
 docker-compose exec -T php7 sh -c 'php ./issue-2-a.php ; echo $?' # exit code is 255. Expected.
 docker-compose exec -T php7 sh -c 'php ./issue-2-b.php ; echo $?' # exit code is 0. Unexpected.
 ```
+
+The issue has been reported to Couchbase (issue [PCBC-841](https://issues.couchbase.com/browse/PCBC-841)).
