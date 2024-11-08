@@ -1,11 +1,11 @@
 ## Issue #3: Broken Operations After Connecting to Couchbase Capella via CNAME + AWS PrivateLink
 
-When connecting to a Couchbase Capella via CNAME + AWS PrivateLink, the PHP Couchbase SDK can't perform any operations
-after successfully connected to the server.
+PHP Couchbase SDKs don't work when connecting to Couchbase Capella via CNAME + AWS PrivateLink.
+
+* In PHP SDK v3, it can't perform any operations after successfully connected to the server.
+* In PHP SDK v4, it can't even connect to the server.
 
 The issue has been reported to Couchbase (Couchbase Support ticket #65012).
-
-The issue is reproducible with [the Couchbase extension v3.2.2] (v3) and [the Couchbase extension v4.2.4] (v4).
 
 ## Reproduce the Issue
 
@@ -72,8 +72,7 @@ docker run --rm --platform=linux/amd64 \
 
    # NOTE: run the following commands inside the Docker container:
    composer global require --no-progress --prefer-dist couchbase/couchbase:~4.2.4 # To install the Couchbase library v4.2.4.
-   COUCHBASE_GET=0 php -d couchbase.log_path=/var/www/couchbase.log -d couchbase.log_level=trace ./couchbase4.php # It always succeeds.
-   COUCHBASE_GET=1 php -d couchbase.log_path=/var/www/couchbase.log -d couchbase.log_level=trace ./couchbase4.php # It runs forever and never succeeds.
+   php -d couchbase.log_path=/var/www/couchbase.log -d couchbase.log_level=trace ./couchbase4.php
 ```
 
 [the Couchbase extension v3.2.2]: https://github.com/couchbase/php-couchbase/releases/tag/v3.2.2
