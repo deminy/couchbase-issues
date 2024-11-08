@@ -7,7 +7,7 @@ use Couchbase\ClusterOptions;
 
 $options = new ClusterOptions();
 $options->credentials('username', 'password');
-$cluster = new Cluster('couchbase://couchbase', $options);
+$cluster = new Cluster("couchbase://{$_SERVER['COUCHBASE_HOST']}?detailed_errcodes=1&ssl=no_verify&wait_for_config=true", $options);
 $collection = $cluster->bucket('test')->defaultCollection();
 
 $key1 = uniqid('key');
