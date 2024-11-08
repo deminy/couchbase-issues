@@ -70,11 +70,10 @@ docker run --rm --platform=linux/amd64 \
     -ti deminy/php-couchbase:4.2.4-php8.1 \
     bash
 
-
-# NOTE: run the following commands inside the Docker container:
-composer global require --no-progress --prefer-dist couchbase/couchbase:~4.2.4
-COUCHBASE_GET=0 php -d couchbase.log_stderr=1 ./couchbase4.php # It always succeeds.
-COUCHBASE_GET=1 php -d couchbase.log_stderr=1 ./couchbase4.php # It runs forever and never succeeds.
+   # NOTE: run the following commands inside the Docker container:
+   composer global require --no-progress --prefer-dist couchbase/couchbase:~4.2.4 # To install the Couchbase library v4.2.4.
+   COUCHBASE_GET=0 php -d couchbase.log_path=/var/www/couchbase.log -d couchbase.log_level=trace ./couchbase4.php # It always succeeds.
+   COUCHBASE_GET=1 php -d couchbase.log_path=/var/www/couchbase.log -d couchbase.log_level=trace ./couchbase4.php # It runs forever and never succeeds.
 ```
 
 [the Couchbase extension v3.2.2]: https://github.com/couchbase/php-couchbase/releases/tag/v3.2.2
