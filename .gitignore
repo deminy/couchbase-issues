@@ -1,3 +1,6 @@
 # Ignore 3rd party packages
 /composer.lock
 /vendor/*
+
+# Ignore Couchbase certificates
+/**/couchbase.pem
