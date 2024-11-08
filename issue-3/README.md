@@ -7,7 +7,7 @@ Please run the following Docker commands in your VPC to reproduce the issue. Not
 following commands, you need to
 
 1. manually update the environment variables _COUCHBASE_HOST_, _COUCHBASE_USER_, _COUCHBASE_PASS_, and _COUCHBASE_BUCKET_.
-2. put the Couchbase certificate file _couchbase.pem_ in the same folder as the test script _issue-3.php_. If you put the
+2. put the Couchbase certificate file _couchbase.pem_ in the same folder as the test script _couchbase3.php_. If you put the
    certificate file differently, you need to update the Docker environment variable _COUCHBASE_CERTIFICATE_.
 
 ```bash
@@ -25,7 +25,7 @@ docker run --rm --platform=linux/amd64 \
     -e COUCHBASE_BUCKET= \
     -v ".:/var/www" \
     -ti deminy/php-couchbase:3.2.2-php8.1 \
-    php ./issue-3.php
+    php ./couchbase3.php
 
 # The following command will run the test script to connect to a Couchbase server and perform
 # a get operation. It runs forever and never succeeds.
@@ -38,7 +38,7 @@ docker run --rm --platform=linux/amd64 \
     -e COUCHBASE_BUCKET= \
     -v ".:/var/www" \
     -ti deminy/php-couchbase:3.2.2-php8.1 \
-    php ./issue-3.php
+    php ./couchbase3.php
 ```
 
 The issue has been reported to Couchbase (Couchbase Support ticket #65012).
