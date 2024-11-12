@@ -25,9 +25,7 @@ $options->network('external');
 $cluster    = new Cluster($connectionString, $options);
 $collection = $cluster->bucket($_SERVER['COUCHBASE_BUCKET'])->defaultCollection();
 
-// We use environment variables to determine if a GET operation should be performed.
-if (!empty($_SERVER['COUCHBASE_GET'])) {
-    $collection->get('foo');
-}
+$collection->set('foo', random_bytes(12));
+echo $collection->get('foo'), PHP_EOL;
 
 echo 'Done', PHP_EOL;

@@ -16,6 +16,4 @@ The issue has been reported to Couchbase (issue [PCBC-841](https://issues.couchb
 
 ## Issue #3: Broken Operations After Connecting to Couchbase Capella via CNAME + AWS PrivateLink
 
-Check [README.md](./issue-3/README.md) for more details.
-
-Couchbase Support ticket #65012.
+This can be fixed by setting network to `external` when making Couchbase connections. Check [README.md](./issue-3/README.md) for more details.
