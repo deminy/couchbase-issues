@@ -11,7 +11,7 @@ if (empty($_SERVER['COUCHBASE_CERTIFICATE']) || !is_readable($_SERVER['COUCHBASE
     exit("Couchbase certificate not found or not readable.");
 }
 
-$connectionString = "couchbases://{$_SERVER['COUCHBASE_HOST']}?trust_certificate={$_SERVER['COUCHBASE_CERTIFICATE']}";
+$connectionString = "couchbases://{$_SERVER['COUCHBASE_HOST']}?io.networkResolution=external&trust_certificate={$_SERVER['COUCHBASE_CERTIFICATE']}";
 echo "Connecting to $connectionString", PHP_EOL;
 
 $options = new ClusterOptions();
