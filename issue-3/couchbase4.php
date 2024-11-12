@@ -25,7 +25,7 @@ $options->network('external');
 $cluster    = new Cluster($connectionString, $options);
 $collection = $cluster->bucket($_SERVER['COUCHBASE_BUCKET'])->defaultCollection();
 
-$collection->set('foo', random_bytes(12));
-echo $collection->get('foo'), PHP_EOL;
+$collection->upsert('foo', uniqid());
+echo $collection->get('foo')->content(), PHP_EOL;
 
 echo 'Done', PHP_EOL;
