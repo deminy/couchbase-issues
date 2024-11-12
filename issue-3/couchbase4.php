@@ -11,7 +11,7 @@ if (empty($_SERVER['COUCHBASE_CERTIFICATE']) || !is_readable($_SERVER['COUCHBASE
     exit("Couchbase certificate not found or not readable.");
 }
 
-$connectionString = "couchbases://{$_SERVER['COUCHBASE_HOST']}?io.networkResolution=external&trust_certificate={$_SERVER['COUCHBASE_CERTIFICATE']}";
+$connectionString = "couchbases://{$_SERVER['COUCHBASE_HOST']}?trust_certificate={$_SERVER['COUCHBASE_CERTIFICATE']}";
 echo "Connecting to $connectionString", PHP_EOL;
 
 $options = new ClusterOptions();
@@ -19,6 +19,7 @@ $options->credentials($_SERVER['COUCHBASE_USER'], $_SERVER['COUCHBASE_PASS']);
 $options->enableTracing(true);
 $options->enableDnsSrv(true);
 $options->enableTls(true);
+$options->network('external');
 // $options->trustCertificate($_SERVER['COUCHBASE_CERTIFICATE']); // TLS certificate can only be set via connection string.
 //$options->tlsVerify('peer');
 $cluster    = new Cluster($connectionString, $options);
