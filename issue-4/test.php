@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+require_once $_SERVER['HOME'] . '/.composer/vendor/autoload.php';
+
+use Couchbase\Cluster;
+use Couchbase\ClusterOptions;
+
+$options = new ClusterOptions();
+$options->credentials('username', 'password');
+$cluster    = new Cluster("couchbase://{$_SERVER['COUCHBASE_HOST']}", $options);
+$collection = $cluster->bucket('test')->defaultCollection();
+
+$collection->upsert('foo', uniqid());
+$doc = $collection->get('foo');
+
+$collection->unlock('foo', $collection->get('foo')->cas());
+
+echo 'Done', PHP_EOL;

@@ -17,3 +17,7 @@ The issue has been reported to Couchbase (issue [PCBC-841](https://issues.couchb
 ## Issue #3: Broken Operations After Connecting to Couchbase Capella via CNAME + AWS PrivateLink
 
 This can be fixed by setting network to `external` when making Couchbase connections. Check [README.md](./issue-3/README.md) for more details.
+
+## Issue #4: Inconsistent Behavior of Unlocking Items
+
+Check [README.md](./issue-4/README.md) for more details.
