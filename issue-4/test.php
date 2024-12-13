@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-require_once $_SERVER['HOME'] . '/.composer/vendor/autoload.php';
+if (explode('.', (phpversion('couchbase') ?: ''))[0] === '4') { // Couchbase 4?
+    require_once $_SERVER['HOME'] . '/.composer/vendor/autoload.php';
+}
 
 use Couchbase\Cluster;
 use Couchbase\ClusterOptions;
