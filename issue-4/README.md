@@ -14,7 +14,7 @@ cd ./issue-4
 docker compose up -d
 
 # Install Composer packages.
-docker compose exec -ti client-v4 composer global require --no-progress --prefer-dist couchbase/couchbase:4.2.5
+docker compose exec -ti client-v4 composer global require --no-progress --prefer-dist couchbase/couchbase:4.2.7
 ```
 
 Secondly, let's run the test scripts to reproduce the issue with the PHP SDK v3:

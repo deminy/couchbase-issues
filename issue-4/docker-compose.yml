@@ -10,7 +10,7 @@ services:
     volumes:
       - ./:/var/www
   client-v4:
-    image: deminy/php-couchbase:4.2.5-php8.2
+    image: deminy/php-couchbase:4.2.7-php8.2
     environment:
       DISABLE_DEFAULT_SERVER: 1
     links:
@@ -25,7 +25,7 @@ services:
       CB_ADMIN_PASSWORD: password
       CB_BUCKET: test
   server-7.6:
-    image: deminy/couchbase:7.6.3
+    image: deminy/couchbase:7.6.5
     environment:
       CB_ADMIN: username
       CB_ADMIN_PASSWORD: password

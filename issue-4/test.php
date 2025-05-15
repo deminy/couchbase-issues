@@ -14,7 +14,8 @@ $options->credentials('username', 'password');
 $cluster    = new Cluster("couchbase://{$_SERVER['COUCHBASE_HOST']}", $options);
 $collection = $cluster->bucket('test')->defaultCollection();
 
-$collection->upsert('foo', uniqid());
+$collection->removeMulti(['foo']); // First, try to remove the item if exists.
+$collection->insert('foo', uniqid());
 $collection->unlock('foo', $collection->get('foo')->cas());
 
 echo 'Done', PHP_EOL;
