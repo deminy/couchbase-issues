@@ -1,0 +1,24 @@
+services:
+  client-v3:
+    image: deminy/php-couchbase:3.2.2-php8.1
+    platform: linux/amd64
+    environment:
+      DISABLE_DEFAULT_SERVER: 1
+    links:
+      - server
+    volumes:
+      - ./:/var/www
+  client-v4:
+    image: deminy/php-couchbase:4.2.7-php8.1
+    environment:
+      DISABLE_DEFAULT_SERVER: 1
+    links:
+      - server
+    volumes:
+      - ./:/var/www
+  server:
+    image: deminy/couchbase:7.6.5
+    environment:
+      CB_ADMIN: username
+      CB_ADMIN_PASSWORD: password
+      CB_BUCKET: test

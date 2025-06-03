@@ -21,3 +21,7 @@ This can be fixed by setting network to `external` when making Couchbase connect
 ## Issue #4: Inconsistent Behavior of Unlocking Items
 
 Check [README.md](./issue-4/README.md) for more details.
+
+## Issue #5: Inconsistent Behavior of Couchbase Counters Across PHP SDK Versions
+
+Check [README.md](./issue-5/README.md) for more details.

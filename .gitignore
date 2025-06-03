@@ -5,3 +5,6 @@
 # Ignore Couchbase logs and certificates
 /**/couchbase.log.*.txt
 /**/couchbase.pem
+
+# Ignore code style config
+/**/.php-cs-fixer.php
