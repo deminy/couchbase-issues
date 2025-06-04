@@ -4,6 +4,8 @@ In legacy PHP SDKs (v2 and v3) for Couchbase, counters can be set as string valu
 the behavior in PHP SDK v4 where counters must be strictly integers. This discrepancy can cause unexpected
 exceptions, such as `DeltaInvalidException`, during migration from older SDK versions to v4.
 
+The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#212](https://github.com/couchbase/couchbase-php-client/issues/212)).
+
 ## Steps to Reproduce
 
 ### 1. Start the Couchbase Containers

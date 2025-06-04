@@ -25,3 +25,5 @@ Check [README.md](./issue-4/README.md) for more details.
 ## Issue #5: Inconsistent Behavior of Couchbase Counters Across PHP SDK Versions
 
 Check [README.md](./issue-5/README.md) for more details.
+
+The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#212](https://github.com/couchbase/couchbase-php-client/issues/212)).

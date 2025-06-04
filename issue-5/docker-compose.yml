@@ -1,6 +1,6 @@
 services:
   client-v3:
-    image: deminy/php-couchbase:3.2.2-php8.1
+    image: deminy/php-couchbase:3.2.2-php8.0
     platform: linux/amd64
     environment:
       DISABLE_DEFAULT_SERVER: 1
@@ -9,7 +9,7 @@ services:
     volumes:
       - ./:/var/www
   client-v4:
-    image: deminy/php-couchbase:4.2.7-php8.1
+    image: deminy/php-couchbase:4.2.7-php8.0
     environment:
       DISABLE_DEFAULT_SERVER: 1
     links:

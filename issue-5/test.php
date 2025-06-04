@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This script tests counter operations using the Couchbase extension v3.
+ * This script tests inconsistent behavior of counter operations across PHP SDK v3 and v4.
  *
  * Usage:
  *     docker compose exec -ti client-v3 php ./test.php # for PHP SDK v3
