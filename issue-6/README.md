@@ -42,7 +42,7 @@ docker compose exec -ti client-v3 php ./test.php key2 # Retrieve the large objec
 docker compose exec -ti client-v4 php ./test.php key2 # Retrieve the large object using PHP SDK v4.
 ```
 
-### 2. Run Test Script by Inserting Data with PHP SDK v4
+### 3. Run Test Script by Inserting Data with PHP SDK v4
 
 Data inserted using PHP SDK v4 can be retrieved without issues, regardless of SDK version or data size.
 
