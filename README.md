@@ -31,3 +31,5 @@ The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#
 ## Issue #6: Inconsistent Behavior of Default JSON Transcoders Across PHP SDK Versions
 
 Check [README.md](./issue-6/README.md) for more details.
+
+The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#218](https://github.com/couchbase/couchbase-php-client/issues/218)).

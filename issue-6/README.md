@@ -4,6 +4,8 @@ In legacy PHP SDKs (v2 and v3) of Couchbase, there is a configuration option `co
 compression of data using a specified algorithm. This option is not forward-compatible with the new PHP SDK v4. When
 data is inserted using PHP SDK v3 with compression enabled, it cannot be retrieved using PHP SDK v4.
 
+The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#218](https://github.com/couchbase/couchbase-php-client/issues/218)).
+
 ## Steps to Reproduce
 
 ### 1. Start the Couchbase Containers

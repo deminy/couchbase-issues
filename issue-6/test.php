@@ -42,3 +42,5 @@ $key2 = 'key2'; // A key for a large object.
 $collection->removeMulti([$key1, $key2]); // Remove the items if they exist.
 $collection->insert($key1, (object) ['foo' => 'bar']); // A small object with a string 'bar'.
 $collection->insert($key2, (object) ['foo' => str_repeat('T', 1_000_000)]); // A large object with a string of 1 million 'T's.
+
+echo 'Inserted two keys with small and large objects.', PHP_EOL;
