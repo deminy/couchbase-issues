@@ -1,0 +1,25 @@
+services:
+  client-v3:
+    image: deminy/php-couchbase:3.2.2-php8.1
+    platform: linux/amd64
+    environment:
+      DISABLE_DEFAULT_SERVER: 1
+    links:
+      - server
+    volumes:
+      - ./:/var/www
+      - ./docker-php-ext-couchbase.ini:/usr/local/etc/php/conf.d/docker-php-ext-couchbase.ini
+  client-v4:
+    image: deminy/php-couchbase:4.3.0-php8.1
+    environment:
+      DISABLE_DEFAULT_SERVER: 1
+    links:
+      - server
+    volumes:
+      - ./:/var/www
+  server:
+    image: deminy/couchbase:7.6.6
+    environment:
+      CB_ADMIN: username
+      CB_ADMIN_PASSWORD: password
+      CB_BUCKET: test
