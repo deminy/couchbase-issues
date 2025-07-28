@@ -2,6 +2,8 @@
 
 After connecting to Couchbase server using PHP SDK v4, unexpected warning messages are generated when performing an operation.
 
+The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#220](https://github.com/couchbase/couchbase-php-client/issues/220)).
+
 ## Steps to Reproduce
 
 ### 1. Start the Docker Containers
