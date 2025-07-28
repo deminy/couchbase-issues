@@ -1,0 +1,15 @@
+services:
+  client:
+    image: deminy/php-couchbase:4.3.0-php8.1
+    environment:
+      DISABLE_DEFAULT_SERVER: 1
+    links:
+      - server
+    volumes:
+      - ./:/var/www
+  server:
+    image: deminy/couchbase:7.6.6
+    environment:
+      CB_ADMIN: username
+      CB_ADMIN_PASSWORD: password
+      CB_BUCKET: test

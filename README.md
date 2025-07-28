@@ -33,3 +33,7 @@ The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#
 Check [README.md](./issue-6/README.md) for more details.
 
 The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#218](https://github.com/couchbase/couchbase-php-client/issues/218)).
+
+## Issue #7: Unexpected Warning Messages When Using PHP SDK v4
+
+Check [README.md](./issue-7/README.md) for more details.
