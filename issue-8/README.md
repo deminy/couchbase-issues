@@ -2,6 +2,8 @@
 
 When logging is enabled in the Couchbase PHP SDK v4, a forked process hangs indefinitely. However, when logging is disabled, the process runs successfully and exits as expected.
 
+The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#221](https://github.com/couchbase/couchbase-php-client/issues/221)).
+
 ## Steps to Reproduce
 
 ### 1. Start the Couchbase Containers
