@@ -39,3 +39,7 @@ The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#
 Check [README.md](./issue-7/README.md) for more details.
 
 The issue has been reported to Couchbase (issue [couchbase/couchbase-php-client#220](https://github.com/couchbase/couchbase-php-client/issues/220)).
+
+## Issue #8: Forked Process Hanging Forever When Logging is Enabled
+
+Check [README.md](./issue-8/README.md) for more details.

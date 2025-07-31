@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    environment:
+      DISABLE_DEFAULT_SERVER: 1
+    volumes:
+      - ./:/var/www
