@@ -13,8 +13,6 @@
 
 declare(strict_types=1);
 
-require_once $_SERVER['HOME'] . '/.composer/vendor/autoload.php';
-
 $pid = pcntl_fork();
 if ($pid === -1) {
     echo 'Could not fork.', PHP_EOL;
